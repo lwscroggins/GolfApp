@@ -1,0 +1,27 @@
+<div data-ng-controller="courseController">
+  <h1 class="centered">Create New Golf Course</h1>
+  <form name="newcourseform"></form>
+    <fieldset>
+      <div class="line">
+        <label>Course Name*</label>
+        <input type="text" required data-ng-model="Course.name" placeholder="course name">
+      </div>
+      <div class="line">
+        <label>City*</label>
+        <input type="text" required data-ng-model="Course.city" placeholder="city">
+      </div>
+      <div class="line">
+        <label>State*</label>
+        <input type="text" required data-ng-model="Course.state" placeholder="state">
+      </div>
+      <div class="line">
+        <label>Number of Holes</label>
+        <input type="text" required data-ng-model="Course.size" placeholder="Enter either 9 or 18">
+    </fieldset>
+
+    <div class="line">
+      <button class="btn-submit" data-ng-disabled="newcourseform.$invalid" data-ng-click="saveCourse()">Create New Course</button>
+    </div>
+    <p><span ng-bind="message"></span></p>
+  </form>
+</div>

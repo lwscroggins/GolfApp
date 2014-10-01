@@ -1,0 +1,20 @@
+{
+  "name": "GolfApp",
+  "version": "0.0.0",
+  "description": "a golf scorecard for any course",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/lwscroggins/GolfApp"
+  },
+  "author": "Larry Scroggins",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lwscroggins/GolfApp/issues"
+  },
+  "homepage": "https://github.com/lwscroggins/GolfApp"
+}
