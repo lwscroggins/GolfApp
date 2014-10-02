@@ -28,12 +28,12 @@ module.exports = function(app) {
       });
     };
 
-    $scope.remove = function() {
-      var index = $scope.courses.indexOf(courses);
-      if(index >= 0) {
-        $scope.
-      }
-    }
+    // $scope.remove = function() {
+    //   var index = $scope.courses.indexOf(courses);
+    //   if(index >= 0) {
+    //     $scope.
+    //   }
+    // }
 
 
 

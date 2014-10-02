@@ -21,7 +21,7 @@ module.exports = function(grunt) {
       dev: {
         expand: true,
         cwd: 'app/',
-        src: ['*.html', '*.css', 'views/**/*.html']
+        src: ['*.html', '*.css', 'views/**/*.html'],
         dest: 'build/',
         filter: 'isFile'
       }
@@ -39,7 +39,7 @@ module.exports = function(grunt) {
 
       angulartest: {
         options: {
-          transform: ['debowerify'];
+          transform: ['debowerify'],
           debug: true
         },
         src: ['test/angular/**/*test.js'],
@@ -62,15 +62,15 @@ module.exports = function(grunt) {
     express: {
       dev: {
         options: {
-          server: 'server.js'
-          background: true;
+          options: 'server.js',
+          background: true
         }
       }
     },
 
     watch: {
       angulartest: {
-        files: ['app/js/**/*.js', 'app/index.html', 'app/views/**/*.html']
+        files: ['app/js/**/*.js', 'app/index.html', 'app/views/**/*.html'],
         tasks: ['browserify:angulartest', 'karma:unit'],
         options: {
           spawn: false

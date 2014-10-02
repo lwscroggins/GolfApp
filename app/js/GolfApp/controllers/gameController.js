@@ -1,7 +1,7 @@
 'use strict'
 
 module.exports = function(app) {
-  app.controller('gameOverController', function() {
+  app.controller('gameController', function() {
 
   });
 };

@@ -17,38 +17,38 @@ module.exports = function(app) {
           console.log(data);
           console.log(status);
         });
+        return promise;
+      },
+
+      saveNewCourse: function() {
+        var promise = $http.post('/api/v.0.0.1/courses', parseCourse(course))
+          .error(function(data, status) {
+            console.log('error saveNewCourse: golfCourseServer');
+            console.log(data);
+            console.log(status);
+        });
+        return promise;
+      },
+
+      saveOldCourse: function() {
+        var promise = $http.post('/api/v.0.0.1/courses' + course._id, parseCourse(course))
+          .error(function(data, status) {
+            console.log('error saveOldCourse: golfCourseServer');
+            console.log(data);
+            console.log(status);
+          });
+        return promise;
+      },
+
+      deleteCourse: function() {
+        var promise = $http.delete('/api/v.0.0.1/courses' + course._id)
+          .error(function(data, status) {
+            console.log('error deleteCourse: golfCourseServer');
+            console.log(data);
+            console.log(status);
+          });
+        return promise;
       }
-      return promise;
-    },
-
-    saveNewCourse: function() {
-      var promise = $http.post('/api/v.0.0.1/courses', parseCourse(course))
-        .error(function(data, status) {
-          console.log('error saveNewCourse: golfCourseServer');
-          console.log(data);
-          console.log(status);
-        })
-      return promise;
-    },
-
-    saveOldCourse: function() {
-      var promise = $http.post('/api/v.0.0.1/courses' + course._id, parseCourse(course))
-        .error(function(data, status) {
-          console.log('error saveOldCourse: golfCourseServer');
-          console.log(data);
-          console.log(status);
-        });
-      return promise;
-    }
-
-    deleteCourse: function() {
-      var promise = $http.delete('/api/v.0.0.1/courses' + course._id)
-        .error(function(data, status) {
-          console.log('error deleteCourse: golfCourseServer');
-          console.log(data);
-          console.log(status);
-        });
-      return promise;
     };
   });
 };
