@@ -1,0 +1,22 @@
+<div data-ng-controller="holeController">
+  <h1 class="centered">Create A New Hole</h1>
+
+  <form name="createnewhole">
+    <fieldset>
+      <div class="line">
+        <label>New Hole Number*</label>
+        <input type="text" required data-ng-model="Hole.hole" placeholder="Enter hole #1-9">
+      </div>
+      <div class="line">
+        <label>Par*</label>
+        <input type="text" required data-ng-model="Hole.par" placeholder="Enter par for this hole">
+      </div>
+    </fieldset>
+
+    <div class="line">
+      <button class="btn-submit" data-ng-disabled="createnewhole.$invalid" data-ng-click="createNewHole()">Submit Hole</button>
+    </div>
+
+    <p><span ng-bind="message"></span></p>
+  </form>
+</div>

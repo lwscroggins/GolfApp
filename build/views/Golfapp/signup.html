@@ -1,0 +1,35 @@
+<div ng-controller="loginController" class="signup container">
+  <h1 class="centered">Create New Account</h1>
+  <form name="newuserform">
+    <fieldset>
+      <div class="line">
+        <label>Login*</label>
+        <input type="text" required data-ng-model="user.username" placeholder="username"></input>
+      </div>
+
+      <div class="line">
+        <label>Password*</label>
+        <input type="text" required data-ng-model="user.password" placeholder="password"></input>
+      </div>
+
+      <p class="required-info">* indicates a required field</p>
+    </fieldset>
+
+    <fieldset>
+      <div class="line">
+        <label>Name</label>
+        <input type="text" placeholder="Enter your name"></input>
+      </div>
+      <div class="line">
+        <label>Email</label>
+        <input type="text" placeholder="Enter your email address"></input>
+      </div>
+    </fieldset>
+
+    <div class="line">
+      <label for=""></label>
+      <button data-ng-disabled="newuserform.$invalid" data-ng-click="createNewUser()" class="btn-submit">Create New User</button>
+      <p><span ng-bind="message"></span></p>
+    </div>
+  </form>
+</div>
